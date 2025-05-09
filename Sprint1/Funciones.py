@@ -22,15 +22,19 @@ def ClasificarCorreo(Correo):
 def RegistrarCorreo():
     Correo = input("Ingrese un correo electronico: ").strip()
     if not CorreoValido(Correo):
-        print("❌ extension no valida")
+        print("❌ Formato de correo no valido")
         return
     Tipo = ClasificarCorreo(Correo)
-    if Tipo:
-        correos.append({"Correo": Correo, "Tipo": Tipo})
-        print(f"✅ Correo registrado como {Tipo}.")
-        print("---------------------")
-    else:
+    if not Tipo:
         print("❌ El dominio del correo no es valido para estudiantes o docentes")
+        return
+    # Verificar si el correo ya está registrado
+    if any(c["Correo"].lower() == Correo.lower() for c in correos):
+        print("❌ Error el correo ya esta registrado")
+        return
+    correos.append({"Correo": Correo, "Tipo": Tipo})
+    print(f"✅ Correo registrado como {Tipo}.")
+    print("---------------------")
 
 #Funcion para ver los correos registrados
 def VerCorreos():
