@@ -47,8 +47,8 @@ def VerCorreos():
 
 #Funcion para buscar correos
 def BuscarCorreo():
-    consulta = input("Ingrese parte del correo que desea buscar: ").strip()
-    encontrados = [c for c in correos if consulta in c["Correo"]]
+    consulta = input("Ingrese parte del correo que desea buscar: ").strip().lower()
+    encontrados = [c for c in correos if consulta in c["Correo"].lower()]
     if encontrados:
         for i, c in enumerate(encontrados, 1):
             print(f"{i}. {c['Correo']} ({c['Tipo']})")
