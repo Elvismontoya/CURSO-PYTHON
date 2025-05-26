@@ -1,0 +1,9 @@
+2025-05-19 18:02:16,889 - ERROR - Error al registrar consulta: Consulta.__init__() missing 2 required positional arguments: 'diagnostico' and 'mascota'
+2025-05-19 18:02:16,889 - INFO - Usuario registro una consulta.
+2025-05-19 18:04:18,568 - INFO - Aplicación iniciada
+2025-05-19 18:04:37,354 - INFO - Usuario registró una mascota: COco, especie: perro, raza: fp
+2025-05-19 18:04:37,355 - INFO - Usuario registro una mascota.
+2025-05-19 18:04:52,769 - INFO - Consulta registrada para: COco - Diagnóstico: Vacuna
+2025-05-19 18:04:52,770 - INFO - Usuario registro una consulta.
+2025-05-19 18:05:04,813 - INFO - Usuario consulto el historial de consultas.
+2025-05-19 18:05:32,832 - INFO - Usuario listo las mascotas registradas.
